@@ -1,9 +1,12 @@
 package com.example.demo.config;
 
 import com.example.demo.entities.*;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 /**
@@ -17,6 +20,9 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
  * @since 2023-02-27
  */
 @Configuration
+@EntityScan
+@ComponentScan
+@CrossOrigin
 public class RestDataConfig implements RepositoryRestConfigurer {
 
     /**
@@ -35,6 +41,8 @@ public class RestDataConfig implements RepositoryRestConfigurer {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
         config.exposeIdsFor(Country.class);
+        config.exposeIdsFor(Cart.class);
+        config.exposeIdsFor(CartItem.class);
         config.exposeIdsFor(Customer.class);
         config.exposeIdsFor(Division.class);
         config.exposeIdsFor(Excursion.class);
@@ -45,4 +53,3 @@ public class RestDataConfig implements RepositoryRestConfigurer {
 
     }
 }
-

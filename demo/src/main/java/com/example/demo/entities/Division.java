@@ -1,4 +1,5 @@
 package com.example.demo.entities;
+
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -29,8 +30,8 @@ public class Division {
     private Country country;
 
 
-    //@OneToMany(mappedBy = "division")
-    //private Set<Customer> customers = new HashSet<>();
+    @OneToMany(mappedBy = "division")
+    private Set<Customer> customers = new HashSet<>();
 
     @Column(name = "division", nullable = false)
     private String division_name;
