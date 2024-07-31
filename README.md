@@ -1,27 +1,48 @@
-<strong> **DO NOT DISTRIBUTE OR PUBLICLY POST SOLUTIONS TO THESE LABS. MAKE ALL FORKS OF THIS REPOSITORY WITH SOLUTION CODE PRIVATE. PLEASE REFER TO THE STUDENT CODE OF CONDUCT AND ETHICAL EXPECTATIONS FOR COLLEGE OF INFORMATION TECHNOLOGY STUDENTS FOR SPECIFICS. ** </strong>
-# WESTERN GOVERNOR UNIVERSITY 
-## D288 – BACK-END PROGRAMMING
-Welcome to Back-End Programming! This is an opportunity for students to develop object-oriented applications that can be integrated with relational databases, write code for object-oriented applications using Spring framework, and implements design patterns for object-oriented applications. 
-FOR SPECIFIC TASK INSTRUCTIONS AND REQUIREMENTS FOR THIS ASSESSMENT, PLEASE REFER TO THE COURSE PAGE.
-## BASIC INSTRUCTIONS
-For this project, you will be building your project using IntelliJ IDEA (Ultimate Edition) in a WGU-provided lab environment. You will be working with an existing MySQL database and Angular front-end, which are supplied for you in the lab environment. You will share this project to a private external GitLab repository and backup regularly. If you wish to work on it on your local machine, you will also need to download the Angular front-end application and create your own MySQL database. Use the links on your course page to install the integrated development environments (IDE), MySQL WorkBench, and IntelliJ IDEA, and pull the project from the lab environment.  
+# Vacation Booking Application
 
+## Overview
 
-## SUPPLEMENTAL RESOURCES  
-1.	How to clone a project to IntelliJ using Git?
+The Vacation Booking Application is a Spring Framework-based project designed to modernize the backend of a travel agency's vacation booking system. This project involves developing a Java backend integrated with an existing MySQL database and an Angular front-end. It showcases skills in developing object-oriented applications, integrating them with relational databases, and implementing design patterns using the Spring Framework.
 
-> Ensure that you have Git installed on your system and that IntelliJ is installed using [Toolbox](https://www.jetbrains.com/toolbox-app/). Make sure that you are using version 2022.3.2. Once this has been confirmed, click the clone button and use the 'IntelliJ IDEA (HTTPS)' button. This will open IntelliJ with a prompt to clone the proejct. Save it in a safe location for the directory and press clone. IntelliJ will prompt you for your credentials. Enter in your WGU Credentials and the project will be cloned onto your local machine.  
+## Project Description
 
-2. How to create a branch and start Development?
+This application was developed as part of a software development course to create a minimally viable product (MVP) for migrating a legacy backend to the modern Spring framework. The project includes various functionalities such as managing vacation packages, handling customer data, and processing bookings.
 
-- GitLab method
-> Press the '+' button located near your branch name. In the dropdown list, press the 'New branch' button. This will allow you to create a name for your branch. Once the branch has been named, you can select 'Create Branch' to push the branch to your repository.
+### Key Features
 
-- IntelliJ method
-> In IntelliJ, Go to the 'Git' button on the top toolbar. Select the new branch option and create a name for the branch. Make sure checkout branch is selected and press create. You can now add a commit message and push the new branch to the local repo.
+1. **Spring Framework Backend**:
+   - Developed using Spring Boot with dependencies such as Spring Data JPA, Rest Repositories, MySQL Driver, and Lombok.
 
-## SUPPORT
-If you need additional support, please navigate to the course page and reach out to your course instructor.
-## FUTURE USE
-Take this opportunity to create or add to a simple resume portfolio to highlight and showcase your work for future use in career search, experience, and education!
+2. **Entity Management**:
+   - Includes entity classes and enums designed to match the provided UML diagram.
 
+3. **Data Access Objects (DAO)**:
+   - Repository interfaces extend JpaRepository and include cross-origin support.
+
+4. **Service Layer**:
+   - Contains services for handling business logic, including a checkout service for processing customer orders.
+
+5. **Validation**:
+   - Implements validation to enforce input requirements needed by the Angular front-end.
+
+6. **REST Controllers**:
+   - Includes REST controllers for handling HTTP requests and managing vacation packages and customer orders.
+
+7. **Sample Data**:
+   - Programmatically adds five sample customers to the application to facilitate testing.
+
+### Technologies Used
+
+- **Spring Framework**: For building the Java backend.
+- **Spring Data JPA**: For interacting with the relational database.
+- **MySQL**: As the database to store vacation booking data.
+- **Angular**: For the front-end interface.
+- **JUnit**: For unit testing the application.
+- **Lombok**: To reduce boilerplate code in Java.
+
+### How to Run the Application
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/mmoffett02/Vacation-Booking-Application.git
+   cd Vacation-Booking-Application
